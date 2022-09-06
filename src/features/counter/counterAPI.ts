@@ -1,6 +1,9 @@
-// A mock function to mimic making an async request for data
-export function fetchCount(amount = 1) {
+const SERVER_URL = "http://127.0.0.1:8080/counter";
+
+export function fetchCount() {
   return new Promise<{ data: number }>((resolve) =>
-    setTimeout(() => resolve({ data: amount }), 500)
+    fetch(SERVER_URL)
+    .then((response) => response.json())
+    .then((json) => resolve(json))
   );
 }

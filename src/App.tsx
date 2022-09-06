@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "./logo-tti.png";
 import Socket from "socket.io-client";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
